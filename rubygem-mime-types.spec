@@ -7,7 +7,7 @@
 Summary: Manages a MIME Content-Type database that will return the Content-Type for a given filename
 Name: rubygem-%{gemname}
 Version: 1.16
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://mime-types.rubyforge.org/
@@ -53,5 +53,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sun Dec 19 2010 Sergio Rubio <rubiojr@frameos.org> - 1.16-2
+- remove archive-tar-minitar dep
+
 * Sun Dec 19 2010 Sergio Rubio <rubiojr@frameos.org> - 1.16-1
 - Initial package
