@@ -7,15 +7,13 @@
 Summary: Manages a MIME Content-Type database that will return the Content-Type for a given filename
 Name: rubygem-%{gemname}
 Version: 1.16
-Release: 2%{?dist}
+Release: 3%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://mime-types.rubyforge.org/
 Source0: http://gemcutter.orggems/%{gemname}-%{version}.gem
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: rubygems
-Requires: rubygem(archive-tar-minitar) >= 0.5
-Requires: rubygem(nokogiri) >= 1.2
 BuildRequires: rubygems
 BuildArch: noarch
 Provides: rubygem(%{gemname}) = %{version}
@@ -53,6 +51,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sun Dec 19 2010 Sergio Rubio <rubiojr@frameos.org> - 1.16-3
+- remove unneeded deps
+
 * Sun Dec 19 2010 Sergio Rubio <rubiojr@frameos.org> - 1.16-2
 - remove archive-tar-minitar dep
 
